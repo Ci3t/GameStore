@@ -45,7 +45,7 @@ function App() {
       <Store />
       </PrivateRoute>
       } />
-      <Route path="/store/:game" element={
+      <Route path="/store/:id" element={
         <PrivateRoute>
 
       <GameInfo />
