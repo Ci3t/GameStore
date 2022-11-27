@@ -12,7 +12,7 @@ body {
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
+	border: 1px solid #888787;
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -21,12 +21,27 @@ body {
 	height: 40px;
 	width: 40px;
     font-size: 13px;
-    color:#333;
+    color:rgb(199, 199, 199);
 } 
 .social-container a:hover {
 	color:rgb(250, 90, 26)
 } 
 
+.forgotPw{
+    color:#c7c7c7;
+    text-decoration: none;
+}
+.forgotPw:hover{
+    color: #cc640e;
+}
+.signUpLink:hover{
+    color:#f1481e;
+    
+}
+.signUpLink{
+    color:#cc640e;
+    /* text-decoration: none; */
+}
 .btnLog {
     position: relative;
     outline: none;

@@ -72,7 +72,7 @@ const Navigate =  useNavigate()
     <div class="logInContainerModal">
     <MDBContainer style={{maxWidth: '60em', paddingTop:'2em'}} >
     <div className="overlay"></div>
-    <MDBCard>
+    <MDBCard style={{backgroundColor:'rgb(18 19 21)',color:'#d9d9d9'}}>
     {currentUser && <div>logged in as : {currentUser.email}</div>}
       <MDBRow className='g-0'>
           {!currentUser && 
@@ -121,10 +121,10 @@ const Navigate =  useNavigate()
               }}
               />
 
-            <MDBBtn disabled={isLoading} onClick={handleSignIn}  className="mb-4 px-5" color='dark' size='lg'>Login</MDBBtn>
-            <a className="small text-muted" href="#!"><Link to="/forgot-password">Forgot Password?</Link></a>
+            <MDBBtn disabled={isLoading} onClick={handleSignIn}  className="mb-4 px-5" color='dark'  size='lg'>Login</MDBBtn>
+            <Link className="forgotPw" to="/forgot-password">Forgot Password?</Link>
             {regError && <Alert variant={"danger"}>{regError?.message}</Alert>}
-            <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Don't have an account? <Link to={"/signup"}>Sign Up</Link></p>
+            <p className="mb-5 pb-lg-2" style={{color: '#c7c7c7'}}>Don't have an account? <Link className="signUpLink" to={"/signup"}>Sign Up</Link></p>
             
           
 
