@@ -7,8 +7,8 @@ export function apiFetch(url) {
 
     return axios.get(url,{
         headers: {
-            'X-RapidAPI-Key': 'd121f27469msh45f35ef23203971p1324a3jsnd99ee818408f',
-            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+            'X-RapidAPI-Key': process.env.REACT_APP_X_RapidAPI_Key,
+            'X-RapidAPI-Host': process.env.REACT_APP_X_RapidAPI_Host
           }
     })
    
@@ -22,8 +22,8 @@ export function getGameById(url,gameId) {
        
         params: {id: gameId},
         headers: {
-            'X-RapidAPI-Key': 'd121f27469msh45f35ef23203971p1324a3jsnd99ee818408f',
-            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+            'X-RapidAPI-Key': process.env.REACT_APP_X_RapidAPI_Key,
+            'X-RapidAPI-Host': process.env.REACT_APP_X_RapidAPI_Host
           }
     })
    

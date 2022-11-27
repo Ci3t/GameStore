@@ -5,7 +5,7 @@ import React from 'react'
 
     const pageNumbers = []
 
-    for(let i = 0; i <= Math.ceil(totalGames/ gamePerPage); i++) {
+    for(let i = 1; i <= Math.ceil(totalGames/ gamePerPage); i++) {
         pageNumbers.push(i)
     }
   return (

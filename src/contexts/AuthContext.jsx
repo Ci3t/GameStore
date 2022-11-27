@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState,useContext  } from 'react'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword,sendPasswordResetEmail , updateEmail,updatePassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword,sendPasswordResetEmail , updateEmail,updatePassword,signInAnonymously } from 'firebase/auth'
 import { auth } from "../firebase";
 
 const AuthContext = React.createContext()
@@ -23,6 +23,10 @@ export function AuthProvider({children}) {
      }
      function login(loginEmail, loginPassword) {
            return signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+        
+     }
+     function anonLogin() {
+           return signInAnonymously(auth);
         
      }
      async function logout() {
@@ -54,7 +58,8 @@ export function AuthProvider({children}) {
         logout,
         resetPaswword,
         updateEmail1,
-        updatePassword1
+        updatePassword1,
+        anonLogin
     }
   return (
     

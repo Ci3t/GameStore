@@ -24,7 +24,7 @@ function App() {
       <AuthProvider>
 
       <Nav/>
-      <FriendList/>
+     
      <Routes>
 
       <Route path="/signup" element={<SignUp />} />
@@ -38,17 +38,20 @@ function App() {
       <Route path="/"     element={
                   <PrivateRoute>
                     <HomePage />
+                    <FriendList/>
                   </PrivateRoute>
                 } />
       <Route path="/store" element={
       <PrivateRoute>
       <Store />
+        <FriendList/>
       </PrivateRoute>
       } />
       <Route path="/store/:id" element={
         <PrivateRoute>
 
       <GameInfo />
+      <FriendList/>
         </PrivateRoute> 
       } />
       <Route path='*' element={<E404 />} />

@@ -15,7 +15,7 @@ function Login() {
   const [loginPassword, setLoginPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [regError, setRegError] = useState('');
-  const {login , currentUser,logout} = useAuth()
+  const {login , currentUser,anonLogin} = useAuth()
 
 
   const handleSignIn=async(e)=>{
@@ -25,6 +25,18 @@ function Login() {
         setRegError('')
         setIsLoading(true)
        await login(loginEmail,loginPassword)
+    }catch(e){
+        setRegError(e)
+    }
+    setIsLoading(false)
+  }
+  const handleAnonSignIn=async(e)=>{
+
+
+    try{
+        setRegError('')
+        setIsLoading(true)
+       await anonLogin()
     }catch(e){
         setRegError(e)
     }
@@ -65,6 +77,7 @@ function Login() {
             />
           
             <button disabled={isLoading} onClick={handleSignIn}>Log In</button>
+            <button disabled={isLoading} onClick={handleAnonSignIn}>Anon LogIN</button>
 
             <Link to="/forgot-password">Forgot Password</Link>
             {regError && <Alert variant={'danger'}>{regError?.message}</Alert>}
