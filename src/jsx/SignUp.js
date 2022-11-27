@@ -1,9 +1,19 @@
 import React, {useState } from "react";
 import { Alert } from "react-bootstrap";
-
+import './login.css'
 import { useAuth } from "../contexts/AuthContext";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
+} from 'mdb-react-ui-kit';
 
 function SignUp() {
   const [regEmail, setRegEmail] = useState("");
@@ -12,9 +22,9 @@ function SignUp() {
   const [isLoading, setIsLoading] = useState(false);
   const [regError, setRegError] = useState('');
   const {signup , currentUser} = useAuth()
-
+  const [isShownLogin, setIsShownLogin] = useState(false);
+  const Navigate =  useNavigate()
   const handleSignUp =async()=>{
-
 
     if(regPassword !== regConfirmPassword){
         return setRegError('Pw Do not Match')
@@ -23,6 +33,7 @@ function SignUp() {
         setRegError('')
         setIsLoading(true)
        await signup(regEmail,regPassword)
+       Navigate('/')
     }catch(e){
         setRegError(e)
     }
@@ -31,52 +42,88 @@ function SignUp() {
 
 
   return (
-    <div>
-      {currentUser && (
-        <div>
-          logged in as : {currentUser.email}
-    
-        </div>
-      )}
-      {!currentUser && (
-        <>
-          <div>
-            <h3>Register</h3>
+    <>
+    {/* <Link className="ml7">
+  <button onClick={()=>{
+    setIsShownLogin(prev=>!prev)
+  }} class="btnLog">
+    <span class="btnLogspan">Sign Up</span>
+  </button>
+    {currentUser && <div>logged in as : {currentUser.email}</div>}
+    </Link>
+     */}
+    <div class="logInContainerModal">
+    <MDBContainer style={{maxWidth: '60em', paddingTop:'2em'}} >
+    <div className="overlay"></div>
+    <MDBCard>
+      <MDBRow className='g-0'>
+          {!currentUser && 
+          <>
+          
+          <MDBCol md='6'>
+          <MDBCardImage src={`/images/login1.jpg`} alt="login form" className='rounded-start w-100'/>
+        </MDBCol>
+
+        <MDBCol md='6'>
+          <MDBCardBody className='d-flex flex-column'>
+
+          {/* <Link className="ml7">
+  <button onClick={()=>{
+    setIsShownLogin(prev=>!prev)
+  }} class="btnLog">
+    <span class="btnLogspan ">Close</span>
+  </button>
+    </Link> */}
+
+            <div className='d-flex flex-row mt-2'>
+              <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }}/>
+              <span className="h1 fw-bold mb-0">GameStore</span>
+            </div>
             
-            <input
-              type="email"
+          
+
+            <h5 className="fw-normal my-4 pb-3" style={{letterSpacing: '1px'}}>Register</h5>
+            
+
+              <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"
               value={regEmail}
               onChange={(e) => {
                 setRegEmail(e.target.value);
               }}
-            />
-        
-            <input
-              type="password"
+              />
+              <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"
               value={regPassword}
               onChange={(e) => {
                 setRegPassword(e.target.value);
               }}
-            />
-            <input
-              type="password"
+              />
+              <MDBInput wrapperClass='mb-4' label='Password Confirm' id='formControlLg' type='password' size="lg"
               value={regConfirmPassword}
               onChange={(e) => {
                 setRegConfirmPassword(e.target.value);
               }}
-              placeholder={'confirm Password'}
-            />
-            <button disabled={isLoading} onClick={handleSignUp}>Sign up</button>
-            {regError && <Alert variant={'danger'}>{regError?.message}</Alert>}
-          </div>
+              />
 
-          <div className="w-100 text-center mt-2">
-            already have an account? <Link to={'/login'}>Log In</Link>
-          </div>
-         
+            <MDBBtn disabled={isLoading} onClick={handleSignUp}  className="mb-4 px-5" color='dark' size='lg'>Sign Up</MDBBtn>
+            
+            {regError && <Alert variant={"danger"}>{regError?.message}</Alert>}
+            <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}> already have an account? <Link to={'/login'}>Log In</Link></p>
+            
+          
+
+          </MDBCardBody>
+        </MDBCol>
+          
         </>
-      )}
-    </div>
+        }
+      </MDBRow>
+    </MDBCard>
+
+  </MDBContainer>
+  </div>
+
+
+        </>
   );
 }
 

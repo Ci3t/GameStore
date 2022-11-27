@@ -1,0 +1,124 @@
+body {
+    /* background-color: #9A616D; */
+  }
+
+  .container{
+
+    max-width: 40em;
+  }
+
+  .social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+    font-size: 13px;
+    color:#333;
+} 
+.social-container a:hover {
+	color:rgb(250, 90, 26)
+} 
+
+.btnLog {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 45px;
+    width: 130px;
+    opacity: 1;
+    background-color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    
+}
+
+.btnLog .btnLogspan {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+  }
+  
+  .btnLog:hover {
+    animation: bn54rotate 0.7s ease-in-out both;
+  }
+  
+  .btnLog:hover .btnLogspan {
+    animation: bn54storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+
+
+  .logInContainerModal{
+    background: url('/public/images/loginBG2.jpg');
+    position: relative;
+    
+    width:100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .overlay{
+    position:absolute;
+    top:0;right:0;left:0;bottom:0;
+    background-color:rgba(0,0,0,0.6);
+    z-index:0;
+  }
+  
+  
+  .ml7{
+    margin-left: auto;
+    text-decoration:none;
+    /* margin-left: auto; */
+  }
+  @keyframes bn54rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes bn54storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }

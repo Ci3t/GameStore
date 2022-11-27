@@ -23,7 +23,7 @@ function App() {
     <div>
       <AuthProvider>
 
-      <Nav/>
+      {/* <Nav/> */}
      
      <Routes>
 
