@@ -121,7 +121,7 @@ const [gamePerPage, setGamePerPage] = useState(12)
           
           </Container>
           
-        <PaginationFunc gamePerPage={gamePerPage} totalGames={gamesList.length} paginate={paginate} />
+        <PaginationFunc gamePerPage={gamePerPage} totalGames={gamesList.length} gamesList={gamesList} paginate={paginate} />
     </div>
   )
 }
