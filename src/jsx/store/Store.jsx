@@ -23,7 +23,8 @@ function Store() {
   },[])
 
   return (
-    <div>
+    <div className='gamelistFullCont'>
+      <div className='overlay'></div>
       <StoreImageSlider gamesList={gamesList} />
       <GameList gamesList={gamesList}/>
       

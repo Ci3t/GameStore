@@ -1,7 +1,8 @@
 import React from 'react'
+import Pagination from 'react-bootstrap/Pagination';
 
 
- const Pagination = ({gamePerPage,totalGames,paginate}) => {
+function PaginationFunc ({gamePerPage,totalGames,paginate}){
 
     const pageNumbers = []
 
@@ -10,7 +11,9 @@ import React from 'react'
     }
   return (
     <nav>
-        <ul className="pagination">
+        {/* <Pagination>{pageNumbers}</Pagination> */}
+       
+         { <ul className="pagination">
             {pageNumbers.map(number=> (
                 <li key={number} className="page-item">
                     <a onClick={()=> paginate(number)}  className='page-link'>
@@ -19,8 +22,8 @@ import React from 'react'
                 </li>
             ))}
                            
-        </ul>
+        </ul> } 
     </nav>
   )
 }
-export default Pagination
+export default PaginationFunc

@@ -8,7 +8,8 @@ function StoreImageSlider({gamesList}) {
 
     <div >
 
-    <Carousel>
+    <Carousel >
+     
     <Carousel.Item interval={1000}>
       <img
         className="d-block w-100"
@@ -69,6 +70,7 @@ function StoreImageSlider({gamesList}) {
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </Carousel.Caption>
     </Carousel.Item>
+   
   </Carousel>
         </div>
   )

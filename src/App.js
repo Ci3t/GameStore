@@ -23,7 +23,7 @@ function App() {
     <div>
       <AuthProvider>
 
-      {/* <Nav/> */}
+     
      
      <Routes>
 
@@ -32,24 +32,27 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPw />} />
       <Route path="/update-profile"     element={
                   <PrivateRoute>
+                     <Nav/>
                     <UpdateProfile />
                   </PrivateRoute>
                 } />
       <Route path="/"     element={
                   <PrivateRoute>
+                     <Nav/>
                     <HomePage />
                     <FriendList/>
                   </PrivateRoute>
                 } />
       <Route path="/store" element={
       <PrivateRoute>
-      <Store />
-        <FriendList/>
+         <Nav/>
+        <Store />
+        {/* <FriendList/> */}
       </PrivateRoute>
       } />
       <Route path="/store/:id" element={
         <PrivateRoute>
-
+           <Nav/>
       <GameInfo />
       <FriendList/>
         </PrivateRoute> 

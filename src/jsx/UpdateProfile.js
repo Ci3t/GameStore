@@ -1,10 +1,19 @@
 import React, {useState } from "react";
 import { Alert } from "react-bootstrap";
-
 import { useAuth } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
+} from 'mdb-react-ui-kit';
 
 function UpdateProfile() {
   const [regEmail, setRegEmail] = useState("");
@@ -56,55 +65,79 @@ function UpdateProfile() {
 
   return (
     <div>
-      {/* {currentUser && (
-        
-      )} */}
-      {currentUser && (
         <>
-          <div>
-            <h3>Update Profile</h3>
-        <div>
-          logged in as : {currentUser.email}
 
-        
-    
+<div class="logInContainerModal">
+<MDBContainer style={{maxWidth: '60em', paddingTop:'2em'}} >
+<div className="overlay"></div>
+<MDBCard>
+  <MDBRow className='g-0'>
+      {currentUser && 
+      <>
+      
+      <MDBCol md='6'>
+      <MDBCardImage style={{backgroundSize:'cover'}} src={`/images/login3.jpg`} alt="login form" className='rounded-start w-100'/>
+    </MDBCol>
+
+    <MDBCol md='6'>
+      <MDBCardBody className='d-flex flex-column'>
+
+
+        <div className='d-flex flex-row mt-2'>
+          <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }}/>
+          <span className="h1 fw-bold mb-0 my-4 pb-3">GameStore</span>
         </div>
-            
-            <input
-              type="email"
-              value={regEmail}
+        
+      
+
+       
+
+          <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"
+          value={regEmail}
               onChange={(e) => {
                 setRegEmail(e.target.value);
               }}
               placeholder={currentUser.email}
-            />
-        
-            <input
-              type="password"
-              value={regPassword}
-              onChange={(e) => {
-                setRegPassword(e.target.value);
-              }}
-              placeholder={'Keep Blank to keep the same Password'}
-            />
-            <input
-              type="password"
-              value={regConfirmPassword}
-              onChange={(e) => {
-                setRegConfirmPassword(e.target.value);
-              }}
-              placeholder={'Keep Blank to keep the same Password'}
-            />
-            <button disabled={isLoading} onClick={handleUpdate}>Update</button>
-            {regError && <Alert variant={'danger'}>{regError?.message}</Alert>}
-          </div>
+          />
+          <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"
+          value={regPassword}
+          onChange={(e) => {
+            setRegPassword(e.target.value);
+          }}
+          placeholder={'Keep Blank to keep the same Password'}
+          />
+          <MDBInput wrapperClass='mb-4' label='Password Confirm' id='formControlLg' type='password' size="lg"
+          value={regConfirmPassword}
+          onChange={(e) => {
+            setRegConfirmPassword(e.target.value);
+          }}
+          placeholder={'Keep Blank to keep the same Password'}
+          />
 
-          <div className="w-100 text-center mt-2">
-            already have an account? <Link to={'/'}>Cancel</Link>
-          </div>
-         
-        </>
-      )}
+        <MDBBtn disabled={isLoading} onClick={handleUpdate}  className="mb-4 px-5" color='dark' size='lg'>Update</MDBBtn>
+        
+        {regError && <Alert variant={"danger"}>{regError?.message}</Alert>}
+        <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}><Link to={'/'}>Cancel</Link></p>
+        
+      
+
+      </MDBCardBody>
+    </MDBCol>
+      
+    </>
+    }
+  </MDBRow>
+</MDBCard>
+
+</MDBContainer>
+</div>
+
+
+    </>
+
+
+
+    {/* !!!!!!! */}
     </div>
   );
 }

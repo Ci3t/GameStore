@@ -1,0 +1,118 @@
+.container1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gamelistFullCont{
+    background-color: #0F0F0E;
+    background-image: url('../../../public/images/loginBG3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+.card1{
+    max-width: 22.9em;
+    --bs-card-bg: none !important;
+   
+}
+
+.card-group1{
+    border: 2px solid #f7e164;
+    border-radius: 10px;
+
+}
+ .overlay{
+    position:absolute;
+    top:0;right:0;left:0;bottom:0;
+    background-color:rgba(0,0,0,0.8);
+    z-index:0;
+  }
+.card-text1{
+    display: block;
+    max-width: 98%;
+    white-space: nowrap;
+    overflow: hidden ;
+    text-overflow: ellipsis;
+    color: #F0EFEB;
+    border-top: 1px dashed rgb(39, 39, 39);
+}
+.moreInfoBtn{
+    /* background-color: rgb(15, 15, 15); */
+    background: rgba( 22, 19, 19, 0.65 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 18px );
+-webkit-backdrop-filter: blur( 18px );
+border-radius: 10px;
+/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    max-width: 8em;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+.moreInfoBtn a{
+   text-decoration:  none;
+   color: white;
+}
+.moreInfoBtn a:hover{
+   text-decoration:  none;
+   color: rgb(253, 230, 125);
+}
+#button-4 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #button-4 a {
+    position: relative;
+    transition: all .45s ease-Out;
+  }
+  
+  #underline {
+    width: 100%;
+    height: 2.5px;
+    margin-top: 15px;
+    align-self: flex-end;
+    left: -200px;
+    background:linear-gradient(45deg, #f79f2d, #ff7300, #fffb00,   #f79f2d);
+    /* filter: blur(1px); */
+    position: absolute;
+    transition: all .3s ease-Out;
+    bottom: 0;
+  }
+  
+  #button-4:hover #underline {
+    left: 0;
+  }
+  
+
+.card-body1{
+    /* background: rgba( 22, 19, 19, 0.7 ); */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11px );
+    -webkit-backdrop-filter: blur( 11px );
+    /* border-radius: 10px; */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
+.card-title1{
+    color: #F0EFEB;
+    display: block;
+    max-width: 98%;
+    white-space: nowrap;
+    overflow: hidden ;
+    text-overflow: ellipsis;
+    
+}
+.card-footer1{
+    display: block;
+    max-width: 100%;
+    /* max-width: 98%; */
+    white-space: nowrap;
+    overflow: hidden ;
+    text-overflow: ellipsis;
+    background-color: #f7da32 !important;
+    color: white;
+}
