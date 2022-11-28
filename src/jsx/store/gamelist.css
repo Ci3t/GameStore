@@ -51,6 +51,36 @@ border-radius: 10px;
     padding: 7px 10px;
     border-radius: 5px;
 }
+
+.pageNumbers{
+    display: flex;
+}
+.pageNumbers li{
+    padding: 10px;
+    border:1px solid white;
+    cursor: pointer;
+}
+.pageNumbers li.active{
+    background-color: white;
+    color: black;
+}
+.pageNumbers li button{
+    background-color: transparent;
+    color: white;
+    border:none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.pageNumbers li button:hover{
+   background-color: white;
+   color: black;
+}
+.pageNumbers li button:focus{
+   outline: none;;
+}
+.activeGamePage{
+    background-color: red;
+}
 .moreInfoBtn a{
    text-decoration:  none;
    color: white;
@@ -64,6 +94,8 @@ border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
   }
+
+
   
   #button-4 a {
     position: relative;

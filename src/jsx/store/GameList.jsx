@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import {apiFetch} from "../../contexts/apiFetch";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import PaginationFunc from './PaginationFunc'
-import ReactCardFlip from 'react-card-flip';
+// import PaginationFunc from './PaginationFunc'
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
@@ -21,6 +22,8 @@ import {
   MDBCardFooter,
   MDBContainer, MDBRow, MDBCol
 } from 'mdb-react-ui-kit';
+import ReactPaginate from 'react-paginate';
+import PaginationFunc from './PaginationFunc';
 
 function GameList({gamesList}) {
 
@@ -28,6 +31,10 @@ const [isLoading, setIsLoading] = useState(false)
 const [isFlipped, setIsFlipped] = useState(false)
 const [currentGamePage, setCurrentGamePage] = useState(1)
 const [gamePerPage, setGamePerPage] = useState(12)
+const [total, setTotal] = useState(10)
+const [minPages, setMinPages] = useState(0)
+const [pages, setPages] = useState(0)
+
 
 
       //Current game
@@ -39,6 +46,7 @@ const [gamePerPage, setGamePerPage] = useState(12)
       //Change page
       const paginate = (pageNumber)=>{
         setCurrentGamePage(pageNumber)
+
       }
     
       // console.log(`${}`);
@@ -46,22 +54,35 @@ const [gamePerPage, setGamePerPage] = useState(12)
         e.preventDefault()
         setIsFlipped(prev=>!prev)
       }
+    //   let active = 1;
+      let pageNumbers = [];
+      for(let i = 1; i <= Math.ceil(gamesList.length/ gamePerPage); i++) {
+        pageNumbers.push(i);
+    }
+    
+    const handleNext = ()=>{
+      setCurrentGamePage(currentGamePage + 1)
+      // if(currentGamePage + 1 > total){
+      //   setTotal(total + )
+      // }
+    }
   return (
     <div >
       
         {isLoading && <h1>Loading....</h1>}
         
         <Container className='container1' >
-        
+       
         {!isLoading && currentGames.map(game =>{
             return (
+              
                 <React.Fragment key={game.id}>
 
 
 
-{/* <Row > */}
-<Col xs={3}  >
-<ul>
+
+            <Col xs={3}  >
+            <ul>
               { <CardGroup className='card-group1'>
                 <Card  className='card1' >
 
@@ -100,28 +121,22 @@ const [gamePerPage, setGamePerPage] = useState(12)
           
 
   
-                    {/* <li>{game.title}</li>
-                    <li>{game.short_description}</li>
-                    <li>{game.game_url}</li>
-                    <li>{game.platform}</li>
-                    <li>{game.publisher}</li>
-                    <li><img src={game.thumbnail}/></li>
-                    <li>{game.release_date}</li>
-                    <li>{game.genre}</li>
-                    <Link  to={`/store/${game.id}`} style={{ margin: '1rem' }}>
-
-                        More Info
-                        </Link>  */}
+                  
                        
                         </Col>
-                        {/* </Row> */}
+                     
                 </React.Fragment>
             )
           })}
           
           </Container>
+
           
-        <PaginationFunc gamePerPage={gamePerPage} totalGames={gamesList.length} gamesList={gamesList} paginate={paginate} />
+        {/* <PaginationFunc minPages={minPages} total={total} gamePerPage={gamePerPage} totalGames={gamesList.length} gamesList={gamesList} paginate={paginate} handleNext={handleNext} /> */}
+         
+      <Pagination page={currentGamePage} count={pageNumbers}/>
+          
+       
     </div>
   )
 }
