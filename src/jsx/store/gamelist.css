@@ -7,16 +7,23 @@
 }
 .gamelistFullCont{
     background-color: #0F0F0E;
-    background-image: url('../../../public/images/loginBG3.jpg');
+    background-image: url('../../../public/images/loginBG2.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-position: center;
     position: relative;
     min-height: 100vh;
+    /* margin-top: 1em; */
 }
 .card1{
     max-width: 22.9em;
     --bs-card-bg: none !important;
    
+}
+
+.loadMoreBtnGames{
+    color:white;
+    z-index: 1140;
 }
 
 .card-group1{
@@ -27,7 +34,7 @@
  .overlay{
     position:absolute;
     top:0;right:0;left:0;bottom:0;
-    background-color:rgba(0,0,0,0.8);
+    background-color:rgba(0,0,0,0.9);
     z-index:0;
   }
 .card-text1{

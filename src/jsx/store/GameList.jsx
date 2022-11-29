@@ -3,7 +3,7 @@ import {apiFetch} from "../../contexts/apiFetch";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 // import PaginationFunc from './PaginationFunc'
-import Pagination from '@mui/material/Pagination';
+import ReactPaginate from 'react-paginate';
 import Stack from '@mui/material/Stack';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -22,7 +22,7 @@ import {
   MDBCardFooter,
   MDBContainer, MDBRow, MDBCol
 } from 'mdb-react-ui-kit';
-import ReactPaginate from 'react-paginate';
+
 import PaginationFunc from './PaginationFunc';
 
 function GameList({gamesList}) {
@@ -31,11 +31,11 @@ const [isLoading, setIsLoading] = useState(false)
 const [isFlipped, setIsFlipped] = useState(false)
 const [currentGamePage, setCurrentGamePage] = useState(1)
 const [gamePerPage, setGamePerPage] = useState(12)
-const [total, setTotal] = useState(10)
+const [total, setTotal] = useState(5)
 const [minPages, setMinPages] = useState(0)
-const [pages, setPages] = useState(0)
+const [pages, setPages] = useState(5)
 
-
+const pagesVisited = currentGamePage
 
       //Current game
     console.log(gamesList);
@@ -62,10 +62,25 @@ const [pages, setPages] = useState(0)
     
     const handleNext = ()=>{
       setCurrentGamePage(currentGamePage + 1)
-      // if(currentGamePage + 1 > total){
-      //   setTotal(total + )
-      // }
+      if(currentGamePage + 1 > total){
+        setTotal(total + pages )
+        setMinPages(minPages + pages )
+      }
     }
+    const handlePrev = ()=>{
+      setCurrentGamePage(currentGamePage - 1)
+      if((currentGamePage - 1 )% pages == 0){
+        setTotal(total - pages )
+        setMinPages(minPages - pages )
+      }
+    }
+
+    const loadMoreGames =()=>{
+      setGamePerPage(gamePerPage => gamePerPage + 5)
+      console.log('clicked');
+    }
+   
+    let pageCount = Math.ceil(gamesList.length/ gamePerPage)
   return (
     <div >
       
@@ -132,11 +147,12 @@ const [pages, setPages] = useState(0)
           </Container>
 
           
-        {/* <PaginationFunc minPages={minPages} total={total} gamePerPage={gamePerPage} totalGames={gamesList.length} gamesList={gamesList} paginate={paginate} handleNext={handleNext} /> */}
-         
-      <Pagination page={currentGamePage} count={pageNumbers}/>
+        <PaginationFunc minPages={minPages} total={total} gamePerPage={gamePerPage} totalGames={gamesList.length} gamesList={gamesList} paginate={paginate} handleNext={handleNext} handlePrev={handlePrev} pages={pages}  currentGamePage={currentGamePage} loadMoreGames={loadMoreGames} />
+          
+          {/* <button onClick={loadMoreGames} className='loadMoreBtnGames'>Load More</button> */}
           
        
+
     </div>
   )
 }

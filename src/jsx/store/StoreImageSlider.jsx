@@ -15,7 +15,7 @@ function StoreImageSlider({gamesList}) {
         className="d-block w-100"
         src={`/images/${imagesArr[0]}.jpg`}
         alt="First slide"
-        
+        style={{maxHeight: '500px'}}
         />
       <Carousel.Caption>
         <h3>BASHIR</h3>
@@ -27,6 +27,7 @@ function StoreImageSlider({gamesList}) {
         className="d-block w-100"
         src={`/images/${imagesArr[1]}.jpg`}
         alt="Second slide"
+        style={{maxHeight: '500px'}}
         />
       <Carousel.Caption>
         <h3>Second slide label</h3>
@@ -38,6 +39,7 @@ function StoreImageSlider({gamesList}) {
         className="d-block w-100"
         src={`/images/${imagesArr[2]}.jpg`}
         alt="Third slide"
+        style={{maxHeight: '500px'}}
       />
       <Carousel.Caption>
         <h3>Third slide label</h3>
@@ -51,7 +53,7 @@ function StoreImageSlider({gamesList}) {
         className="d-block w-100"
         src={`/images/${imagesArr[3]}.jpg`}
         alt="First slide"
-        
+        style={{maxHeight: '500px'}}
         />
       <Carousel.Caption>
         <h3>First slide label</h3>
@@ -63,7 +65,7 @@ function StoreImageSlider({gamesList}) {
         className="d-block w-100"
         src={`/images/${imagesArr[4]}.jpg`}
         alt="First slide"
-        
+        style={{maxHeight: '500px'}}
         />
       <Carousel.Caption>
         <h3>First slide label</h3>
