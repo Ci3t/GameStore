@@ -1,3 +1,7 @@
 .storeBGAll{
     background-color: black;
 }
+.friendlist_store_display{
+    display: flex;
+    background-color: black;
+}

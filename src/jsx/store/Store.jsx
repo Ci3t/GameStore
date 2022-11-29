@@ -3,6 +3,7 @@ import GameList from './GameList'
 import StoreImageSlider from './StoreImageSlider'
 import {apiFetch} from "../../contexts/apiFetch";
 import './store.css'
+import FriendList from '../Friendlist/FriendList';
 
 
 
@@ -24,12 +25,15 @@ function Store() {
   },[])
 
   return (
+    <div >
+    {/* <FriendList/>  */}
     <div className='storeBGAll'>
       <div className='gamelistFullCont'></div>
       {/* <div className='overlay2'></div> */}
       <StoreImageSlider gamesList={gamesList} />
       <GameList gamesList={gamesList}/>
       
+    </div>
     </div>
   )
 }

@@ -101,7 +101,7 @@ function GameInfo() {
         <Card.Body>
           {/* <Card.Title>Game Status: {gameData.status}</Card.Title> */}
           <Card.Text className='card-info-text1'>
-          <Card.Header>Game Status: {gameData.status}</Card.Header>
+          <Card.Header>Game Status:<span className={gameData.status == 'Live' ? 'statusGreen':'statusRed'}> {gameData.status}</span> </Card.Header>
           <ListGroup variant="flush">
         <ListGroup.Item id='list-info-item'>Developers :  {gameData.developer}</ListGroup.Item>
         <ListGroup.Item id='list-info-item'>Publishers :  {gameData.publisher}</ListGroup.Item>
@@ -140,9 +140,13 @@ function GameInfo() {
         {gameData.description}
         </Card.Text>
        
-        <a  id='card-info-officialWeb' target="_blank" href={gameData.game_url}><span>Website</span></a>
+        <button id='card-info-officialWeb' className='cardInfo-Btn' target="_blank" href={gameData.game_url}><span>Website</span></button>
         
-        <a  id='card-info-officialWeb' target="_blank" href={gameData.freetogame_profile_url}><span>FreeToGame Profile</span></a>
+        <a  id='card-info-officialWeb' target="_blank" href={gameData.freetogame_profile_url}>
+         
+          <span>FreeToGame Profile</span>
+          
+        </a>
        
       </Card.Body>
     </Card>

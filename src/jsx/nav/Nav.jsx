@@ -33,7 +33,7 @@ function Nav() {
     
       {/* fixed='top'  */}
     
-        <MDBNavbar  light bgColor="dark">
+        <MDBNavbar fixed='top' light bgColor="dark">
           <MDBContainer fluid>
             <MDBNavbarBrand>Fixed top</MDBNavbarBrand>
 

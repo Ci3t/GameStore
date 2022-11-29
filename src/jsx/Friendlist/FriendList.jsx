@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
+import './friendlist.css'
 function FriendList() {
 const [friends,setFriends] = useState([])
 const [addFriendInput, setAddFriendInput] = useState('')
@@ -45,21 +46,23 @@ const [isShown, setIsShown] = useState(false)
   
 
   return (
-    <div>
+    <div className="friendlist-container-BG">
+
+    <div className='friendlist-fixed-Position'>
       <label htmlFor="search-friend">
         <input value={searchFriendInput} onChange={(e)=>{setSearchFriendInput(e.target.value)}} type="text" id='search-friend' name="search-friend" placeholder="Search friend"/>
        
       </label>
       <ul>
         {friends.filter(friend=>{
-
-         return searchFriendInput.toLowerCase() === '' ? friend : friend.name.toLowerCase().includes(searchFriendInput)
+          
+          return searchFriendInput.toLowerCase() === '' ? friend : friend.name.toLowerCase().includes(searchFriendInput)
         })
         .map(friend=> {
           return (
             <React.Fragment  key={friend.id}>
             <li >{friend.name}</li>
-            <li ><img src={friend.avatar} /></li>
+            <li ><img className='friendList-Img' src={friend.avatar} /></li>
             <li><button onClick={()=>{
               deleteFriends(friend.id)
             }}>X</button></li>
@@ -74,6 +77,7 @@ const [isShown, setIsShown] = useState(false)
         }}>Add Friend</button></li>
       </ul>
     </div>
+        </div>
   )
 }
 

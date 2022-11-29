@@ -46,10 +46,11 @@ function App() {
       <Route path="/store" element={
       <PrivateRoute>
          <Nav/>
-      
+        <div className="flex-AppJs-Container">
+        <FriendList/>
+
+        </div>
          <Store />
-      
-        {/* <FriendList/> */}
       </PrivateRoute>
       } />
       <Route path="/store/:id" element={

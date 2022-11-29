@@ -1,0 +1,5 @@
+.flex-AppJs-Container{
+    display: flex;
+    background-color: black;
+    /* min-height: 100vh; */
+}
