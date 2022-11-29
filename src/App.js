@@ -46,7 +46,9 @@ function App() {
       <Route path="/store" element={
       <PrivateRoute>
          <Nav/>
-        <Store />
+      
+         <Store />
+      
         {/* <FriendList/> */}
       </PrivateRoute>
       } />

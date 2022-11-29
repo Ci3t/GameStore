@@ -1,3 +1,7 @@
+body{
+    /* background-color: black !important; */
+}
+
 .container1{
     display: flex;
     flex-direction: row;
@@ -7,12 +11,16 @@
 }
 .gamelistFullCont{
     background-color: #0F0F0E;
-    background-image: url('../../../public/images/loginBG2.jpg');
+    background-image: url('../../../public/images/loginBG3.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    position: relative;
+    position: fixed;
+    top:0;
     min-height: 100vh;
+    min-width: 100%;
+    opacity: 0.5;
+
     /* margin-top: 1em; */
 }
 .card1{
@@ -31,12 +39,14 @@
     border-radius: 10px;
 
 }
- .overlay{
+ .overlay2{
     position:absolute;
     top:0;right:0;left:0;bottom:0;
     background-color:rgba(0,0,0,0.9);
     z-index:0;
+    min-height: 100vh;
   }
+  
 .card-text1{
     display: block;
     max-width: 98%;
@@ -46,6 +56,7 @@
     color: #F0EFEB;
     border-top: 1px dashed rgb(39, 39, 39);
 }
+
 .moreInfoBtn{
     /* background-color: rgb(15, 15, 15); */
     background: rgba( 22, 19, 19, 0.65 );

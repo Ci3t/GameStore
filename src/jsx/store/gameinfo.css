@@ -1,0 +1,179 @@
+.gameInfoContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    /* padding-left: 2em; */
+    /* background-color: black; */
+    /* color: white; */
+    background-color: black;
+
+}
+.gameInfoBGImageCont{
+    /* background-color: #0F0F0E; */
+    background-image: url('../../../public/images/loginBG3.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    position: fixed;
+    top:0;
+    min-height: 100vh;
+    min-width: 100%;
+    opacity: 0.5;
+    z-index: 0;
+}
+.gameInfoCard{
+    max-height: 30em;
+    width: 20em;
+    margin-top: 1.2em;
+    /* color: white; */
+    --bs-card-bg: none !important;
+
+    
+}
+.cardInfo{
+    background: rgba( 3, 3, 3, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+   
+}
+#card-info-group1{
+    border: 2px solid #f3b643;
+    border-radius: 10px;
+    /* max-height: 31em; */
+    margin-left: 2em;
+    /* margin-top: 1em; */
+   
+}
+#card-info-footerSide{
+    /* background-color:#f7e164; */
+    background: rgb(249 233 8 / 86%);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    color: black;
+}
+.card-info-text1{
+    display: block;
+    max-width: 98%;
+    white-space: nowrap;
+    overflow: hidden ;
+    text-overflow: ellipsis;
+    color: #F0EFEB;
+    border-top: 1px dashed rgb(39, 39, 39);
+}
+
+.gameinfoLineSep{
+    /* background-image: linear-gradient(to bottom, #333 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: left;
+    background-size: 55px 10px;
+    background-repeat: repeat-y; */
+    border: 1px solid rgb(214, 214, 214);
+    margin-left: 10px;
+    margin-top: 1.2em;
+    
+}
+#list-info-item{
+    background-color: transparent ;
+    color:white ;
+    border-bottom: solid 1px rgb(88, 74, 8);
+}
+.checkGameTitle{
+    /* background-color: red; */
+}
+#card-info-bodyAbout{
+background: rgba( 3, 3, 3, 0.55 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 16px );
+-webkit-backdrop-filter: blur( 16px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+--bs-card-bg:transparent ;
+color: #e7e7e7;
+margin-bottom: 1em;
+}
+#card-info-list-group-req{
+    background: rgba( 3, 3, 3, 0.55 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 16px );
+-webkit-backdrop-filter: blur( 16px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+--bs-card-bg:transparent ;
+color: #e7e7e7;
+margin-bottom: 1em;
+
+}
+#card-info-list-item-req{
+    background: rgba( 3, 3, 3, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px ); */
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    --bs-card-bg:transparent ;
+    color: #e7e7e7;
+    /* margin-bottom: 1em; */
+    display: flex;
+
+}
+#card-info-list-item-reqBtn{
+    background: rgba( 3, 3, 3, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    --bs-card-bg:transparent ;
+    color: #e7e7e7;
+
+
+}
+#cpu,#ram,#gpu{
+     color: black;
+
+}
+
+
+#card-info-officialWeb:hover{
+   color: #d7cb0a;
+   background-color: black;
+}
+#card-info-officialWeb {
+    text-decoration: none;
+    color: black;
+    background-color: #d7cb0a;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+#about-info-GameH5{
+    background-color: #d7cb0a;
+    padding: 0.4em;
+    /* border-radius: 10px; */
+    color: black;
+    text-align: center;
+}
+.checkGameLineSep{
+    border: 1px solid rgb(214, 214, 214);
+    margin-top: 1em;
+}
+.gameInfoTitle{
+    font-size: 4.5em;
+    font-weight: bold;
+    z-index: 30;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.gameInfoDesc{
+    max-width: 40em;
+}
+.gameInfoSlider{
+    border: 3px solid black;
+    display: block !important;
+}
+/* .active{
+    background-color: none !important;
+    padding: none !important;
+    border-radius: none !important;
+} */

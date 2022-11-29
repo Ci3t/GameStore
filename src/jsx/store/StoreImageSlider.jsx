@@ -65,7 +65,7 @@ function StoreImageSlider({gamesList}) {
         className="d-block w-100"
         src={`/images/${imagesArr[4]}.jpg`}
         alt="First slide"
-        style={{maxHeight: '500px'}}
+        style={{maxHeight: '500px',width: '200px'}}
         />
       <Carousel.Caption>
         <h3>First slide label</h3>

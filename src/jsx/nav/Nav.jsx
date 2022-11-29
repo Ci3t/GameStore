@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import './nav.css'
 import {
   MDBNavbar,
@@ -8,11 +8,31 @@ import {
   MDBNavbarItem,
   MDBNavbarLink,
 } from "mdb-react-ui-kit";
+import { useAuth } from "../../contexts/AuthContext";
+
 
 function Nav() {
+  const navigate = useNavigate()
+  const {logout} = useAuth()
+  const [error,setError] = useState(null)
+  
+  const handleLogOut=async()=>{
+    setError('')
+    try{
+        
+       await logout()
+       navigate('/')
+    }catch(e){
+        setError(e)
+    }
+   
+  }
   return (
     <div>
       <>
+    
+      {/* fixed='top'  */}
+    
         <MDBNavbar  light bgColor="dark">
           <MDBContainer fluid>
             <MDBNavbarBrand>Fixed top</MDBNavbarBrand>
@@ -22,8 +42,13 @@ function Nav() {
 
               <Link to="/store">Store</Link>
             </div>
+            <div>
+            <Link to="/update-profile">Update</Link>
+            <Link onClick={handleLogOut}>LogOut</Link>
+            </div>
           </MDBContainer>
         </MDBNavbar>
+        {error}
       </>
     </div>
   );
