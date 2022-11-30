@@ -84,7 +84,7 @@ function GameList({ gamesList }) {
                               {game.genre}
                             </Card.Text>
                             <Card.Text className="card-text1">
-                              Official Website
+                              <a target={'_blank'} href={game.game_url}>Official Website</a>
                             </Card.Text>
 
                             <div className="moreInfoBtn" id="button-4">
