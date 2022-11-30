@@ -36,7 +36,13 @@ function Nav({setShowFriends}) {
         <MDBNavbar id={'navbar-bgColor'} fixed='top'  >
           
           <MDBContainer fluid>
-            <MDBNavbarBrand>Fixed top</MDBNavbarBrand>
+            <MDBNavbarBrand>
+              <div className="logoNavCont">
+
+              <img className="logoNavBar"  src="./images/logo.png"/><Link to={'/'}>Ci3t GameStore</Link>
+              
+              </div>
+              </MDBNavbarBrand>
 
             <div className="nav-Link">
               <Link to="/">Home</Link>

@@ -35,6 +35,10 @@
 
     margin-left: 27em;
 }
+#store-imgSlider-Resp  {
+
+  padding-top:5em;
+}
 .loadMoreBtnGames{
     color:white;
     z-index: 1140;
@@ -177,7 +181,7 @@ border-radius: 10px;
 @media all and (max-width:1060px) {
     #store-imgSlider-Resp{
         max-width: 44em;
-    padding-top: 5em;
+    padding-top: 7em;
     }
 }
 @media all and (max-width:975px) {
