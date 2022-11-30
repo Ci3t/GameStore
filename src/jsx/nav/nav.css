@@ -2,17 +2,14 @@
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    /* margin-bottom: 2em; */
-    /* gap: 2em; */
-   
+
 }
 .nav-Link a{
     text-decoration: none;
     margin-right: 2em;
     color: rgb(240, 229, 76);
     position: relative;
-    /* width: 0; */
-    /* left: 50%; */
+
 }
 .nav-Link a::before{
     content: "";
@@ -61,7 +58,7 @@
 
 #navbar-bgColor{
     background-color: rgb(21, 23, 31);
-    /* background-image: url('../../../public/images/wallapaper4.jpg'); */
+
     opacity: 1;
     border-bottom: 1px solid rgb(248, 227, 34);
     background: rgba( 22, 19, 19, 0.65 );
@@ -79,7 +76,7 @@
   
     .nav-Link{
         margin-left: 0;
-        /* margin-right: 0; */
+      
     }
     
 }

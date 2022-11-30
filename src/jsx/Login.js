@@ -16,8 +16,7 @@ import {
   MDBInput
 } from 'mdb-react-ui-kit';
 import './login.css'
-import { padding } from "@mui/system";
-import { Padding } from "@mui/icons-material";
+
 export function PrivateRoute({ children }) {
   const { currentUser } = useAuth();
 
@@ -28,7 +27,7 @@ function Login() {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isShownLogin, setIsShownLogin] = useState(false);
+  // const [isShownLogin, setIsShownLogin] = useState(false);
   const [regError, setRegError] = useState("");
   const { login, currentUser, anonLogin } = useAuth();
 const Navigate =  useNavigate()
@@ -55,19 +54,13 @@ const Navigate =  useNavigate()
     setIsLoading(false);
   };
 
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-  }
+  // const handleSubmit = (e)=>{
+  //   e.preventDefault();
+  // }
 
   return (
     <>
-    {/* { <Link className="ml7">
-  <button onClick={()=>{
-    setIsShownLogin(prev=>!prev)
-  }} class="btnLog">
-    <span class="btnLogspan">Log In</span>
-  </button>
-    </Link> } */}
+   
     
     <div class="logInContainerModal">
     <MDBContainer style={{maxWidth: '60em', paddingTop:'2em'}} >
@@ -84,14 +77,6 @@ const Navigate =  useNavigate()
 
         <MDBCol md='6'>
           <MDBCardBody className='d-flex flex-column'>
-
-          {/* <Link className="ml7">
-  <button onClick={()=>{
-    setIsShownLogin(prev=>!prev)
-  }} class="btnLog">
-    <span class="btnLogspan ">Close</span>
-  </button>
-    </Link> */}
 
             <div className='d-flex flex-row mt-2'>
               <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }}/>

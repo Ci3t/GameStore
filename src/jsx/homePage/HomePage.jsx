@@ -1,27 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './homepage.css'
 import Typewriter from 'typewriter-effect';
 
-import {AuthProvider} from '../../contexts/AuthContext'
-import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from "../../contexts/AuthContext";
+
+import { Link } from 'react-router-dom'
+
 
 function HomePage() {
-  const navigate = useNavigate()
-  const {logout} = useAuth()
-  const [error,setError] = useState(null)
+ 
+  // const {logout} = useAuth()
+
   
-  const handleLogOut=async()=>{
-    setError('')
-    try{
+  // const handleLogOut=async()=>{
+  //   setError('')
+  //   try{
         
-       await logout()
-       navigate('/')
-    }catch(e){
-        setError(e)
-    }
+  //      await logout()
+  //      navigate('/')
+  //   }catch(e){
+  //       setError(e)
+  //   }
    
-  }
+  // }
 
 
   return (

@@ -5,15 +5,15 @@ import {
   MDBNavbar,
   MDBContainer,
   MDBNavbarBrand,
-  MDBNavbarItem,
-  MDBNavbarLink,
+ 
 } from "mdb-react-ui-kit";
 import { useAuth } from "../../contexts/AuthContext";
 
 
+
 function Nav({setShowFriends}) {
   const navigate = useNavigate()
-  const {logout} = useAuth()
+  const {logout,currentUser} = useAuth()
   const [error,setError] = useState(null)
   
   const handleLogOut=async()=>{
@@ -31,7 +31,7 @@ function Nav({setShowFriends}) {
     <div>
       <>
     
-      {/* fixed='top'  */}
+   
     
         <MDBNavbar id={'navbar-bgColor'} fixed='top'  >
           
@@ -46,6 +46,7 @@ function Nav({setShowFriends}) {
             <div className="navbar-links-update">
               <Link><button onClick={()=>{setShowFriends(prev=>!prev)}}>Friends</button></Link>
             <Link to="/update-profile">Update</Link>
+            <Link>{currentUser?.email}</Link>
             <Link onClick={handleLogOut}>LogOut</Link>
             </div>
           </MDBContainer>

@@ -1,15 +1,15 @@
 
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import {getGameById} from "../../contexts/apiFetch";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import './gameinfo.css'
 import ListGroup from 'react-bootstrap/ListGroup';
-import Carousel from 'react-bootstrap/Carousel';
+
 import GameInfoImgSlider from './GameInfoImgSlider';
-import Button from 'react-bootstrap/Button';
+
 
 function GameInfo() {
 
@@ -104,7 +104,7 @@ function GameInfo() {
 <Card className='gameInfoCard cardInfo ' id={'card-info-group1'}>
         <Card.Img variant="top" src={gameData.thumbnail}  />
         <Card.Body>
-          {/* <Card.Title>Game Status: {gameData.status}</Card.Title> */}
+        
           <Card.Text className='card-info-text1'>
           <Card.Header>Game Status:<span className={gameData.status == 'Live' ? 'statusGreen':'statusRed'}> {gameData.status}</span> </Card.Header>
           <ListGroup variant="flush">
@@ -130,12 +130,7 @@ function GameInfo() {
     <ul>
       <li><h1 className='gameInfoTitle'>{gameData.title}</h1></li>
         <li><h4 className='gameInfoTitleError'>{gameInfoError?.message}</h4></li>
-      {/* <li>{gameData.screenshots && gameData.screenshots.map(img=>{
-        return (
-          <img width={'200px'} src={img.image} alt={'screenshot"Missing"'} />
-        )
-        
-      })}</li> */}
+     
       <GameInfoImgSlider gameData={gameData}/>
       <Card id={'card-info-bodyAbout'}>
       
@@ -193,7 +188,7 @@ function GameInfo() {
          </ListGroup.Item>
     </ListGroup>
 }
-          {/* <div className='checkGameLineSep'></div> */}
+         
           {/*//! Game Check Card */}
           {gameData.minimum_system_requirements && 
           <ListGroup id={'gameInfo-checkGame-Group'} variant="flush">
@@ -215,13 +210,7 @@ function GameInfo() {
         <input value={checkInputGPU} onChange={(e)=>{setCheckInputGPU(e.target.value)}} type='text' name='gpu' id='gpu' required/></label>
         </div>
       </ListGroup.Item>
-      {/* <ListGroup.Item id="card-info-list-item-req">
-    
-      </ListGroup.Item>
-      <ListGroup.Item id="card-info-list-item-req">
-     
-
-      </ListGroup.Item> */}
+      
       <ListGroup.Item id="card-info-list-item-reqBtn">
       <div className="ms-2 me-auto">
           <div className="fw-bold"> <button id={'card-info-officialWeb'} onClick={checkGame}>Check</button></div>
@@ -235,27 +224,11 @@ function GameInfo() {
    
     </ListGroup>
         }
-      {/* {gameData.minimum_system_requirements && 
-      <>
-      <div> Check Game</div>
-      <form onSubmit={handleCheckSubmit}>
-
-      <label htmlFor='cpu'>Enter CPU:
-        <input value={checkInputCPU} onChange={(e)=>{setCheckInputCPU(e.target.value)}} type='text' name='cpu' id='cpu' required /></label>
-      <label htmlFor='ram'>Enter RAM:
-        <input value={checkInputRAM} onChange={(e)=>{setCheckInputRAM(e.target.value)}} type='text' name='ram' id='ram' required/></label>
-      <label htmlFor='gpu'>Enter GPU:
-        <input value={checkInputGPU} onChange={(e)=>{setCheckInputGPU(e.target.value)}} type='text' name='gpu' id='gpu' required/></label>
-        <button onClick={checkGame}>Check</button>
-
-        <h3>{checkMSG}</h3>
-      </form>
-      </>
-      }  */}
+     
       
     </ul>
 
-      {/* //! game check */}
+     
      
     </div>
   )

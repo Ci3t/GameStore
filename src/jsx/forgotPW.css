@@ -1,0 +1,25 @@
+#forgotPwImgBG{
+
+    background-color: rgb(13, 13, 14);
+   
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    position: ab;
+    top:0;
+    min-height: 100vh;
+    min-width: 100%;
+   
+}
+.forgotPw2{
+    color:#cc640e;
+}
+.forgotPw2:hover{
+    color:orangered;
+}
+#cancelPW a{
+    color:#cc640e;
+}
+#cancelPW a:hover{
+    color:orangered;
+}

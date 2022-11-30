@@ -15,7 +15,7 @@
     min-height: 100vh;
     min-width: 100%;
     opacity: 0.2;
-    /* filter: grayscale(); */
+
     z-index: 0;
 }
 .homePage-text-Check{
@@ -61,7 +61,7 @@
     color: rgb(0, 0, 0);
     font-size: 1.4rem;
     font-style: italic;
-    /* font-weight: bold; */
+
     text-transform: uppercase;
     background-color: rgb(202, 173, 10);
 }

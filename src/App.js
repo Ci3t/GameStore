@@ -39,11 +39,9 @@ function App() {
                   </PrivateRoute>
                 } />
       <Route path="/"     element={
-                  // <PrivateRoute>
-                    //  <Nav setShowFriends={setShowFriends}/>
+                
                     <HomePage />
-                    // <FriendList showFriends={showFriends}/>
-                  // </PrivateRoute>
+                   
                 } />
       <Route path="/store" element={
       <PrivateRoute>
