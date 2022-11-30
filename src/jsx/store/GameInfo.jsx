@@ -155,14 +155,14 @@ function GameInfo() {
               {gameData.description}
             </Card.Text>
 
-            <button
+            <a
               id="card-info-officialWeb"
               className="cardInfo-Btn"
               target="_blank"
               href={gameData.game_url}
               >
               <span>Buy Now</span>
-            </button>
+            </a>
 
             <a
               id="card-info-officialWeb"
