@@ -66,7 +66,7 @@ function GameInfo() {
           if (checkInputRAM < +memory) {
             setCheckMSG('You Can Run it On : "LOW" Difficulty');
             setVariant("danger");
-          } else if (checkInputRAM === +memory) {
+          } else if (checkInputRAM == +memory) {
             setCheckMSG('You Can Run it On : "MEDIUM" Difficulty');
             setVariant("warning");
           } else {
@@ -77,7 +77,7 @@ function GameInfo() {
           if (checkInputRAM < 8) {
             setCheckMSG('You Can Run it On : "LOW" Difficulty');
             setVariant("danger");
-          } else if (checkInputRAM === 8) {
+          } else if (checkInputRAM == 8) {
             setCheckMSG('You Can Run it On : "MEDIUM" Difficulty');
             setVariant("warning");
           } else {
@@ -161,7 +161,7 @@ function GameInfo() {
               target="_blank"
               href={gameData.game_url}
               >
-              <span>Website</span>
+              <span>Buy Now</span>
             </button>
 
             <a
