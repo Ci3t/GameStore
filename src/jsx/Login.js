@@ -37,7 +37,7 @@ const Navigate =  useNavigate()
       setRegError("");
       setIsLoading(true);
       await login(loginEmail, loginPassword);
-      Navigate('/')
+      Navigate('/store')
     } catch (e) {
       setRegError(e);
     }
@@ -48,7 +48,7 @@ const Navigate =  useNavigate()
       setRegError("");
       setIsLoading(true);
       await anonLogin();
-      Navigate('/')
+      Navigate('/store')
     } catch (e) {
       setRegError(e);
     }

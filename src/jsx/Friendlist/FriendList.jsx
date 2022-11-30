@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import './friendlist.css'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 function FriendList({showFriends}) {
 const [friends,setFriends] = useState([])
 const [addFriendInput, setAddFriendInput] = useState('')
@@ -59,7 +60,7 @@ const [isShown, setIsShown] = useState(false)
       <li><button onClick={()=>{
         setIsShown(prev=>!prev)
         addFriends()
-      }}> <i class="fas fa-plus"></i> Add Friend</button></li>
+      }}> <i className="fa-solid fa-user-plus" /> Add Friend</button></li>
         {isShown &&  <li><input type={'text'} id={'friendlist-AddFInput'} value={addFriendInput} onChange={(e)=>{setAddFriendInput(e.target.value)}} /></li>}
         {friends.filter(friend=>{
           
@@ -68,13 +69,21 @@ const [isShown, setIsShown] = useState(false)
         .map(friend=> {
           return (
             <React.Fragment  key={friend.id}>
-              <li><button onClick={()=>{
+              <div className='friends-Li-Cont'>
+
+              <li className='friends-li-delete'><button onClick={()=>{
                 deleteFriends(friend.id)
-              }}>X</button></li>
+              }}><span>&#10006;</span></button></li>
               <div className='friendlist-name-imgCont'>
 
             <li ><img className='friendList-Img' src={friend.avatar} /></li>
+            <div className='friendlist-name-onlineCheck'>
+
             <li > {friend.name}</li>
+            
+            <li className={friend.isOnline ? 'onlineGreen':'offlineRed'} >{friend.isOnline ? 'Online': 'Offline'}</li>
+            </div>
+              </div>
               </div>
             </React.Fragment>
           )

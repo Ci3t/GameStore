@@ -1,0 +1,94 @@
+.homePage-fullCont{
+    background-color: black;
+    min-height: 100vh;
+    padding-top: 6em;
+   
+
+}
+.homePage-imgBG-cont{
+    background-image: url('../../../public/images/wallapaper5.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    position: fixed;
+    top:0;
+    min-height: 100vh;
+    min-width: 100%;
+    opacity: 0.2;
+    /* filter: grayscale(); */
+    z-index: 0;
+}
+.homePage-text-Check{
+    z-index: 3;
+    position: relative;
+    color: rgb(253, 253, 253);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.HomePage-button{
+    position: relative;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 0.5em 1em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+    transition: var(--speed-normal);
+    border: 1px solid var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.HomePage-button:hover {
+    border: 1px solid transparent;
+    background: rgb(236, 42, 8) url('../../../public/images/pixel2.png'); 
+    transition-delay: 0.8s;
+    background-size: 180px;
+    animation: animate1 var(--speed-fast) steps(8) forwards;
+    color: black;
+}
+.homePage-typeWriter{
+
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+    font-style: italic;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    background-color: rgb(202, 173, 10);
+}
+.homePage-logo{
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+.HomePage-button-Cont{
+    display: flex;
+    justify-content: center;
+}
+.HomePage-button-Cont a{
+    text-decoration: none;
+    color:white
+}
+.HomePage-button-Cont a:hover{
+    text-decoration: none;
+    color:black;
+}
+@keyframes animate1 {
+    0% {
+      background-position-y: 0;
+    }
+    100% {
+      background-position-y: -480px;
+    }
+  }

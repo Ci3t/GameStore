@@ -33,7 +33,8 @@ function Nav({setShowFriends}) {
     
       {/* fixed='top'  */}
     
-        <MDBNavbar fixed='top' light bgColor="dark">
+        <MDBNavbar id={'navbar-bgColor'} fixed='top'  >
+          
           <MDBContainer fluid>
             <MDBNavbarBrand>Fixed top</MDBNavbarBrand>
 
@@ -42,7 +43,7 @@ function Nav({setShowFriends}) {
 
               <Link to="/store">Store</Link>
             </div>
-            <div>
+            <div className="navbar-links-update">
               <Link><button onClick={()=>{setShowFriends(prev=>!prev)}}>Friends</button></Link>
             <Link to="/update-profile">Update</Link>
             <Link onClick={handleLogOut}>LogOut</Link>

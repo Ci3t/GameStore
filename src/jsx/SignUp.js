@@ -33,7 +33,7 @@ function SignUp() {
         setRegError('')
         setIsLoading(true)
        await signup(regEmail,regPassword)
-       Navigate('/')
+       Navigate('/store')
     }catch(e){
         setRegError(e)
     }

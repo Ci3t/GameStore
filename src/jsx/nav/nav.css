@@ -9,5 +9,68 @@
 .nav-Link a{
     text-decoration: none;
     margin-right: 2em;
-   
+    color: rgb(240, 229, 76);
+    position: relative;
+    /* width: 0; */
+    /* left: 50%; */
+}
+.nav-Link a::before{
+    content: "";
+  background-color: #fce460;
+  transition: 0.2s ease-out;
+  width: 0%;
+  height: 2px;
+
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+.nav-Link a:hover::before{
+    width: 100%;
+    
+}
+.nav-Link a:hover{
+    transition: 0.2s ease-in;
+    color: rgb(250, 77, 8);
+    
+}
+.navbar-links-update a{
+    text-decoration: none;
+    margin-right: 2em;
+    color: rgb(240, 229, 76);
+    position: relative;
+}
+.navbar-links-update a:hover{
+    transition: 0.2s ease-in;
+    color: rgb(250, 77, 8);
+}
+.navbar-links-update a:hover::before{
+    width: 100%;
+}
+.navbar-links-update a::before{
+    content: "";
+    background-color: #fce460;
+    transition: 0.2s ease-out;
+    width: 0%;
+    height: 2px;
+  
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+#navbar-bgColor{
+    background-color: rgb(21, 23, 31);
+    /* background-image: url('../../../public/images/wallapaper4.jpg'); */
+    opacity: 1;
+    border-bottom: 1px solid rgb(248, 227, 34);
+    background: rgba( 22, 19, 19, 0.65 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    -webkit-box-shadow:0px 0px 10px 4px rgba(255,227,46,0.26);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(255,227,46,0.26);
+    box-shadow: 0px 0px 10px 4px rgba(255,227,46,0.26);
 }

@@ -20,11 +20,12 @@
 .gameInfoContainer{
     display: flex;
     flex-direction: row;
-    margin-top: 1em;
+    padding-top: 4em;
     /* padding-left: 2em; */
     /* background-color: black; */
     /* color: white; */
     background-color: black;
+    
 
 }
 .gameInfoBGImageCont{
@@ -46,6 +47,7 @@
     margin-top: 1.2em;
     /* color: white; */
     --bs-card-bg: none !important;
+   
 
     
 }
@@ -230,3 +232,11 @@ margin-bottom: 1em;
     padding: none !important;
     border-radius: none !important;
 } */
+
+
+@media all and (max-width:1150px) {
+    #card-info-group1{
+        max-width: 14em;
+    max-height: 26em;
+    }
+}

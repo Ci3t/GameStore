@@ -33,16 +33,17 @@ function App() {
       <Route path="/forgot-password" element={<ForgotPw />} />
       <Route path="/update-profile"     element={
                   <PrivateRoute>
-                     <Nav/>
+                     <Nav setShowFriends={setShowFriends}/>
                     <UpdateProfile />
+                    <FriendList showFriends={showFriends}/>
                   </PrivateRoute>
                 } />
       <Route path="/"     element={
-                  <PrivateRoute>
-                     <Nav/>
+                  // <PrivateRoute>
+                    //  <Nav setShowFriends={setShowFriends}/>
                     <HomePage />
-                    <FriendList/>
-                  </PrivateRoute>
+                    // <FriendList showFriends={showFriends}/>
+                  // </PrivateRoute>
                 } />
       <Route path="/store" element={
       <PrivateRoute>
@@ -56,9 +57,9 @@ function App() {
       } />
       <Route path="/store/:id" element={
         <PrivateRoute>
-           <Nav/>
+           <Nav setShowFriends={setShowFriends}/>
       <GameInfo />
-      <FriendList/>
+      <FriendList showFriends={showFriends}/>
         </PrivateRoute> 
       } />
       <Route path='*' element={<E404 />} />
