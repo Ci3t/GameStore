@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import './friendlist.css'
-function FriendList() {
+function FriendList({showFriends}) {
 const [friends,setFriends] = useState([])
 const [addFriendInput, setAddFriendInput] = useState('')
 const [searchFriendInput, setSearchFriendInput] = useState('')
@@ -46,14 +46,21 @@ const [isShown, setIsShown] = useState(false)
   
 
   return (
+    <>
+    {showFriends && 
     <div className="friendlist-container-BG">
 
     <div className='friendlist-fixed-Position'>
       <label htmlFor="search-friend">
-        <input value={searchFriendInput} onChange={(e)=>{setSearchFriendInput(e.target.value)}} type="text" id='search-friend' name="search-friend" placeholder="Search friend"/>
+        <input value={searchFriendInput} onChange={(e)=>{setSearchFriendInput(e.target.value)}} type="text" id='search-friend' name="search-friend" placeholder="Search friend &#128269;"/>
        
       </label>
       <ul>
+      <li><button onClick={()=>{
+        setIsShown(prev=>!prev)
+        addFriends()
+      }}> <i class="fas fa-plus"></i> Add Friend</button></li>
+        {isShown &&  <li><input type={'text'} id={'friendlist-AddFInput'} value={addFriendInput} onChange={(e)=>{setAddFriendInput(e.target.value)}} /></li>}
         {friends.filter(friend=>{
           
           return searchFriendInput.toLowerCase() === '' ? friend : friend.name.toLowerCase().includes(searchFriendInput)
@@ -61,23 +68,25 @@ const [isShown, setIsShown] = useState(false)
         .map(friend=> {
           return (
             <React.Fragment  key={friend.id}>
-            <li >{friend.name}</li>
+              <li><button onClick={()=>{
+                deleteFriends(friend.id)
+              }}>X</button></li>
+              <div className='friendlist-name-imgCont'>
+
             <li ><img className='friendList-Img' src={friend.avatar} /></li>
-            <li><button onClick={()=>{
-              deleteFriends(friend.id)
-            }}>X</button></li>
+            <li > {friend.name}</li>
+              </div>
             </React.Fragment>
           )
         })}
-        {isShown &&  <li><input type={'text'} value={addFriendInput} onChange={(e)=>{setAddFriendInput(e.target.value)}} /></li>}
+        
        
-        <li><button onClick={()=>{
-          setIsShown(prev=>!prev)
-          addFriends()
-        }}>Add Friend</button></li>
+      
       </ul>
     </div>
         </div>
+        }
+        </>
   )
 }
 

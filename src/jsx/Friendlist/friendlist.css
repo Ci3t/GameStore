@@ -1,12 +1,35 @@
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+
 .friendlist-fixed-Position{
+    display: flex;
+    flex-direction: column;
     position: fixed;
    margin-top: 3em;
     z-index: 90;
-    background: rgba( 3, 3, 3, 0.85 );
+    /* height: 100vh;
+     */
+    right: 0;
+    top: 0;
+    bottom:0;
+    color: white;
+    /* overflow-y:scroll; */
+    overflow-x:hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    max-height: auto;
+    /* -webkit-scrollbar: */
+   
+
+    background: rgba(31, 31, 31,0.4);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 16px );
 -webkit-backdrop-filter: blur( 16px );
 border-radius: 10px;
+border: 1px solid black;
 /* max-width: 10em; */
 /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
@@ -14,4 +37,27 @@ border-radius: 10px;
 .friendList-Img{
     border-radius: 50%;
     max-width: 60px;
+}
+.friendlist-name-imgCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2em;
+    /* margin-left: 2em; */
+}
+.friendlist-name-imgCont > li{
+   margin-left: 1em;
+   /* max-width: 20em; */
+  
+}
+
+#friendlist-AddFInput{
+    color: black;
+    padding: 0.2em;
+}
+#search-friend{
+    margin-top: 1em;
+    margin-left: 2em;
+    color: black;
+    padding: 0.2em;
 }

@@ -11,7 +11,7 @@ import {
 import { useAuth } from "../../contexts/AuthContext";
 
 
-function Nav() {
+function Nav({setShowFriends}) {
   const navigate = useNavigate()
   const {logout} = useAuth()
   const [error,setError] = useState(null)
@@ -43,6 +43,7 @@ function Nav() {
               <Link to="/store">Store</Link>
             </div>
             <div>
+              <Link><button onClick={()=>{setShowFriends(prev=>!prev)}}>Friends</button></Link>
             <Link to="/update-profile">Update</Link>
             <Link onClick={handleLogOut}>LogOut</Link>
             </div>

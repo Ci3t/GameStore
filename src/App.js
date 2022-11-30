@@ -18,6 +18,7 @@ import UpdateProfile from "./jsx/UpdateProfile";
 
 
 function App() {
+  const [showFriends, setShowFriends]= useState(false)
  
   return (
     <div>
@@ -45,9 +46,9 @@ function App() {
                 } />
       <Route path="/store" element={
       <PrivateRoute>
-         <Nav/>
+         <Nav setShowFriends={setShowFriends} />
         <div className="flex-AppJs-Container">
-        <FriendList/>
+         <FriendList showFriends={showFriends} />
 
         </div>
          <Store />

@@ -1,5 +1,6 @@
 .storeBGAll{
     background-color: black;
+    padding-right: 5em;
 }
 .friendlist_store_display{
     display: flex;
