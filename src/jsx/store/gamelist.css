@@ -1,6 +1,4 @@
-body{
-    /* background-color: black !important; */
-}
+
 
 .container1{
     display: flex;
@@ -21,7 +19,7 @@ body{
     min-width: 100%;
     opacity: 0.5;
 
-    /* margin-top: 1em; */
+
 }
 .card1{
     max-width: 22.9em;
@@ -29,6 +27,14 @@ body{
    
 }
 
+#store-imgSlider-Resp  h3 {
+
+    margin-left: 15em;
+}
+#store-imgSlider-Resp  p {
+
+    margin-left: 27em;
+}
 .loadMoreBtnGames{
     color:white;
     z-index: 1140;
@@ -58,13 +64,13 @@ body{
 }
 
 .moreInfoBtn{
-    /* background-color: rgb(15, 15, 15); */
+  
     background: rgba( 22, 19, 19, 0.65 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 18px );
 -webkit-backdrop-filter: blur( 18px );
 border-radius: 10px;
-/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+
     max-width: 8em;
     padding: 7px 10px;
     border-radius: 5px;
@@ -127,7 +133,7 @@ border-radius: 10px;
     align-self: flex-end;
     left: -200px;
     background:linear-gradient(45deg, #f79f2d, #ff7300, #fffb00,   #f79f2d);
-    /* filter: blur(1px); */
+
     position: absolute;
     transition: all .3s ease-Out;
     bottom: 0;
@@ -139,11 +145,11 @@ border-radius: 10px;
   
 
 .card-body1{
-    /* background: rgba( 22, 19, 19, 0.7 ); */
+
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 11px );
     -webkit-backdrop-filter: blur( 11px );
-    /* border-radius: 10px; */
+
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     
 }
@@ -159,10 +165,50 @@ border-radius: 10px;
 .card-footer1{
     display: block;
     max-width: 100%;
-    /* max-width: 98%; */
+
     white-space: nowrap;
     overflow: hidden ;
     text-overflow: ellipsis;
     background-color: #f7da32 !important;
     color: white;
+}
+
+
+@media all and (max-width:1060px) {
+    #store-imgSlider-Resp{
+        max-width: 44em;
+    padding-top: 5em;
+    }
+}
+@media all and (max-width:975px) {
+    
+    .moreInfoBtn{
+        padding: 0px;
+    }
+    .card-title1{
+        font-size: 1rem !important;
+    }
+}
+
+@media all and (max-width:765px) {
+    #store-imgSlider-Resp{
+        max-width: 34em !important;
+    padding-top: 5em;
+    }
+    #gameListResponsiveCard{
+        width: 50%;
+    }
+}
+@media all and (max-width:540px) {
+    #store-imgSlider-Resp{
+        max-width: 20em !important;
+    padding-top: 7em;
+  
+    }
+    #gameListResponsiveCard{
+        width: 90%;
+    }
+    .card-group1{
+        max-height: 28em;
+    }
 }

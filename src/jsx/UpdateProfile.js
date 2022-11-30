@@ -14,6 +14,7 @@ import {
   MDBIcon,
   MDBInput
 } from 'mdb-react-ui-kit';
+import './updateProfile.css'
 
 function UpdateProfile() {
   const [regEmail, setRegEmail] = useState("");
@@ -68,7 +69,7 @@ function UpdateProfile() {
         <>
 
 <div class="logInContainerModal">
-<MDBContainer style={{maxWidth: '60em', paddingTop:'2em'}} >
+<MDBContainer id="updateProifle-Main" style={{maxWidth: '60em', paddingTop:'5em'}} >
 <div className="overlay"></div>
 <MDBCard>
   <MDBRow className='g-0'>

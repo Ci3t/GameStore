@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import './pagination.css'
 
-import { ReceiptRounded } from '@mui/icons-material';
 
-function PaginationFunc ({gamePerPage,totalGames,paginate,gamesList,total,minPages,handleNext,handlePrev,pages,handleDisablePrevBtn,currentGamePage,loadMoreGames}){
+
+function PaginationFunc ({gamePerPage,totalGames,paginate,total,minPages,handleNext,handlePrev,currentGamePage}){
     
     const pageNumbers = []
 
@@ -36,7 +36,7 @@ function PaginationFunc ({gamePerPage,totalGames,paginate,gamesList,total,minPag
             
            return (
               <li key={number} className="page-item">
-                  <a onClick={()=> paginate(number)}  className={currentGamePage == number ? 'active':null}>
+                  <a onClick={()=> paginate(number)}  className={currentGamePage == number ? 'active3':null}>
                       {number}
                   </a>
               </li>
@@ -49,19 +49,9 @@ function PaginationFunc ({gamePerPage,totalGames,paginate,gamesList,total,minPag
       <button disabled={currentGamePage == pageNumbers[pageNumbers.length-1]? true : false} className='paginationButtonNext' onClick={()=>{handleNext()}}> Next &raquo;</button>
       
                      
-  {/* <button className='paginationButtonNext' onClick={loadMoreGames}>LoadMore</button> */}
+ 
   </ul> } 
-{/* { <ul className="pagination">
-      {pageNumbers.map(number=> (
-          <li key={number} className="page-item">
-              <a onClick={()=> paginate(number)}  className='page-link'>
-                  {number}
-              </a>
-          </li>
-      ))}
-                     
-  </ul> }
-         */}
+
       </>
     );
 }
@@ -72,21 +62,3 @@ export default PaginationFunc
 
 
 
-
-//   <nav>
-  {/* <Pagination>{pageNumbers}</Pagination> */}
- 
-   {/* { <ul className="pagination">
-      {pageNumbers.map(number=> (
-          <li key={number} className="page-item">
-              <a onClick={()=> paginate(number)}  className='page-link'>
-                  {number}
-              </a>
-          </li>
-      ))}
-                     
-  </ul> }  */}
-
-
-
-{/* </nav> */}

@@ -2,13 +2,13 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import './imgSlide.css'
 
-function StoreImageSlider({gamesList}) {
+function StoreImageSlider() {
   const imagesArr = [1,2,3,4,5]
   return (
 
     <div >
 
-    <Carousel >
+    <Carousel id={'store-imgSlider-Resp'}>
      
     <Carousel.Item interval={1000}>
       <img
@@ -17,9 +17,9 @@ function StoreImageSlider({gamesList}) {
         alt="First slide"
         style={{maxHeight: '500px'}}
         />
-      <Carousel.Caption>
+      <Carousel.Caption >
         <h3>BASHIR</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <p>The Netlify Sherif</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item interval={1000}>
@@ -30,8 +30,8 @@ function StoreImageSlider({gamesList}) {
         style={{maxHeight: '500px'}}
         />
       <Carousel.Caption>
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3>Omer </h3>
+        <p>Firebase Fighter and Kyle Fan</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
@@ -42,9 +42,9 @@ function StoreImageSlider({gamesList}) {
         style={{maxHeight: '500px'}}
       />
       <Carousel.Caption>
-        <h3>Third slide label</h3>
+        <h3>Nofar</h3>
         <p>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          i have one more questions
         </p>
       </Carousel.Caption>
     </Carousel.Item>
@@ -56,8 +56,8 @@ function StoreImageSlider({gamesList}) {
         style={{maxHeight: '500px'}}
         />
       <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h3>Yael</h3>
+        <p>React Victim</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item interval={1000}>
@@ -68,8 +68,8 @@ function StoreImageSlider({gamesList}) {
         style={{maxHeight: '500px',width: '200px'}}
         />
       <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h3>Meir</h3>
+        <p>The CSS Warrior and one more Coffee </p>
       </Carousel.Caption>
     </Carousel.Item>
    

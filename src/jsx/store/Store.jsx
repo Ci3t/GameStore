@@ -3,7 +3,7 @@ import GameList from './GameList'
 import StoreImageSlider from './StoreImageSlider'
 import {apiFetch} from "../../contexts/apiFetch";
 import './store.css'
-import FriendList from '../Friendlist/FriendList';
+
 
 
 
@@ -12,25 +12,34 @@ import FriendList from '../Friendlist/FriendList';
 function Store() {
   const [gamesList, setGamesList] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const [errorStore, setErrorStore] = useState('')
   useEffect(()=>{
     setIsLoading(true)
     const getGame = async ()=>{
-        
-      const {data} = await apiFetch('https://free-to-play-games-database.p.rapidapi.com/api/games')
-      
-      setGamesList(data)
-      setIsLoading(false)
+      setErrorStore('')
+        try{
+
+          const {data} = await apiFetch('https://free-to-play-games-database.p.rapidapi.com/api/games')
+          
+          setGamesList(data)
+          setIsLoading(false)
+        }catch(e){
+          setErrorStore(e)
+        }
     }
     getGame()
   },[])
 
   return (
     <div >
-    {/* <FriendList/>  */}
+
     <div className='storeBGAll'>
       <div className='gamelistFullCont'></div>
-      {/* <div className='overlay2'></div> */}
+   
       <StoreImageSlider gamesList={gamesList} />
+      <h4 className='ErrorMessageStore'>{errorStore?.message}</h4>
+      {/* //!TODO SPINNER */}
+      {isLoading && <h1>LOADINGGG</h1>}
       <GameList gamesList={gamesList}/>
       
     </div>

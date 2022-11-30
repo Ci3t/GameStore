@@ -96,7 +96,7 @@ const pagesVisited = currentGamePage
 
 
 
-            <Col xs={3}  >
+            <Col id='gameListResponsiveCard' xs={3}  >
             <ul>
               { <CardGroup className='card-group1'>
                 <Card  className='card1' >

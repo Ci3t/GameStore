@@ -21,15 +21,13 @@
     display: flex;
     flex-direction: row;
     padding-top: 4em;
-    /* padding-left: 2em; */
-    /* background-color: black; */
-    /* color: white; */
+ 
     background-color: black;
     
 
 }
 .gameInfoBGImageCont{
-    /* background-color: #0F0F0E; */
+
     background-image: url('../../../public/images/loginBG3.jpg');
     background-repeat: no-repeat;
     background-size:cover;
@@ -45,7 +43,7 @@
     max-height: 30em;
     width: 20em;
     margin-top: 1.2em;
-    /* color: white; */
+ 
     --bs-card-bg: none !important;
    
 
@@ -64,13 +62,13 @@
 #card-info-group1{
     border: 2px solid #f3b643;
     border-radius: 10px;
-    /* max-height: 31em; */
+
     margin-left: 2em;
-    /* margin-top: 1em; */
+
    
 }
 #card-info-footerSide{
-    /* background-color:#f7e164; */
+
     background: rgb(249 233 8 / 86%);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 16px );
@@ -88,10 +86,7 @@
 }
 
 .gameinfoLineSep{
-    /* background-image: linear-gradient(to bottom, #333 10%, rgba(255, 255, 255, 0) 0%);
-    background-position: left;
-    background-size: 55px 10px;
-    background-repeat: repeat-y; */
+
     border: 1px solid rgb(214, 214, 214);
     margin-left: 10px;
     margin-top: 1.2em;
@@ -102,9 +97,7 @@
     color:white ;
     border-bottom: solid 1px rgb(88, 74, 8);
 }
-.checkGameTitle{
-    /* background-color: red; */
-}
+
 #card-info-bodyAbout{
 background: rgba( 3, 3, 3, 0.55 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -131,13 +124,10 @@ margin-bottom: 1em;
 #card-info-list-item-req{
     background: rgba( 3, 3, 3, 0.55 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    /* backdrop-filter: blur( 16px );
-    -webkit-backdrop-filter: blur( 16px ); */
-    /* border-radius: 10px; */
-    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+
     --bs-card-bg:transparent ;
     color: #e7e7e7;
-    /* margin-bottom: 1em; */
+
     display: flex;
 
 }
@@ -155,17 +145,6 @@ margin-bottom: 1em;
 
 }
 
-/* .cardInfo-Btn{
-    outline: none;
-    border: none;
-    width: 90px;
-    height: 30px;
-    background: transparent;
-    color: white;
-    position: relative;
-    font-size: 0.9em;
-    margin: 17px 0;
-} */
 
 #card-info-officialWeb{
     position: relative;
@@ -204,7 +183,7 @@ margin-bottom: 1em;
 #about-info-GameH5{
     background-color: #d7cb0a;
     padding: 0.4em;
-    /* border-radius: 10px; */
+
     color: black;
     text-align: center;
 }
@@ -220,6 +199,10 @@ margin-bottom: 1em;
     color: white;
     position: relative;
 }
+.gameInfoTitleError{
+    z-index: 40;
+    color: white;
+}
 .gameInfoDesc{
     max-width: 40em;
 }
@@ -227,11 +210,6 @@ margin-bottom: 1em;
     border: 3px solid black;
     display: block !important;
 }
-/* .active{
-    background-color: none !important;
-    padding: none !important;
-    border-radius: none !important;
-} */
 
 
 @media all and (max-width:1150px) {
@@ -239,4 +217,124 @@ margin-bottom: 1em;
         max-width: 14em;
     max-height: 26em;
     }
+    .carouselGameInfoSlider{
+        max-width: 35em;
+        margin-left: 0;
+    }
+    #card-info-bodyAbout{
+        max-width: 36em;
+    }
+    #card-info-list-group-req{
+        max-width: 36em;
+    }
+    #card-info-list-item-req{
+        display: block;
+        max-width: 36em;
+    }
+    #gameInfo-checkGame-Group{
+        max-width: 36em;
+    }
 }
+@media all and (max-width:768px) {
+    #card-info-group1{
+        max-width: 14em;
+    max-height: 26em;
+    }
+    .gameInfoTitle{
+        font-size: 3.5rem;
+    }
+    .carouselGameInfoSlider{
+        max-width: 25em;
+        margin-left: 0;
+    }
+    #card-info-bodyAbout{
+        max-width: 26em;
+    }
+    #card-info-list-group-req{
+        max-width: 26em;
+    }
+    #card-info-list-item-req{
+        display: block;
+        max-width: 26em;
+    }
+    #card-info-list-item-reqBtn{
+        
+        max-width: 26em;
+    }
+    #gameInfo-checkGame-Group{
+        max-width: 36em;
+    }
+    
+}
+@media all and (max-width:668px) {
+    #card-info-group1{
+        max-width: 14em;
+        max-height: 26em;
+    }
+    .gameInfoTitle{
+        font-size: 3.5rem;
+    }
+    .carouselGameInfoSlider{
+        max-width: 20em;
+        margin-left: 0;
+    }
+    #card-info-bodyAbout{
+        max-width: 20em;
+    }
+    #card-info-list-group-req{
+        max-width: 20em;
+    }
+    #card-info-list-item-req{
+        display: block;
+        max-width: 20em;
+    }
+    #card-info-list-item-reqBtn{
+        
+        max-width: 20em;
+    }
+    #gameInfo-checkGame-Group{
+        max-width: 36em;
+    }
+    
+}
+@media all and (max-width:558px) {
+    .gameInfoContainer{
+        display: block;
+    }
+    #card-info-group1{
+        max-width: 14em;
+        max-height: 26em;
+        margin-top: 3em;
+    }
+    .gameInfoTitle{
+        font-size: 3.5rem;
+    }
+    .carouselGameInfoSlider{
+        max-width: 20em;
+        margin-left: 0;
+    }
+    #gameInfo-SliderText{
+        display: none;
+        color: red;
+    }
+    #card-info-bodyAbout{
+        max-width: 20em;
+    }
+    #card-info-list-group-req{
+        max-width: 20em;
+    }
+    #card-info-list-item-req{
+        display: block;
+        max-width: 20em;
+    }
+    #card-info-list-item-reqBtn{
+        
+        max-width: 20em;
+    }
+    #gameInfo-checkGame-Group{
+        max-width: 36em;
+    }
+    
+}
+
+

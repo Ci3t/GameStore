@@ -22,17 +22,22 @@ function GameInfo() {
   const [isLoading,setIsLoading]=useState(false)
   const [checkMSG,setCheckMSG]=useState('')
   const [variant,setVariant]=useState('')
+  const [gameInfoError,setGameInfoError]=useState('')
   
   
   useEffect(()=>{
     setIsLoading(true)
     const getGameId = async ()=>{
-      
-      
-      const {data} = await getGameById(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=540`, id)
-      console.log(data);
-      setGameData(data)
-      setIsLoading(false)
+      setGameInfoError('')
+      try{
+
+        const {data} = await getGameById(`https://free-to-play-games-database.p.rapidapi.com/api/game`, id)
+        console.log(data);
+        setGameData(data)
+        setIsLoading(false)
+      }catch(e){
+        setGameInfoError(e)
+      }
     }
     getGameId()
   },[id])
@@ -124,7 +129,7 @@ function GameInfo() {
 
     <ul>
       <li><h1 className='gameInfoTitle'>{gameData.title}</h1></li>
-
+        <li><h4 className='gameInfoTitleError'>{gameInfoError?.message}</h4></li>
       {/* <li>{gameData.screenshots && gameData.screenshots.map(img=>{
         return (
           <img width={'200px'} src={img.image} alt={'screenshot"Missing"'} />
@@ -191,7 +196,7 @@ function GameInfo() {
           {/* <div className='checkGameLineSep'></div> */}
           {/*//! Game Check Card */}
           {gameData.minimum_system_requirements && 
-          <ListGroup variant="flush">
+          <ListGroup id={'gameInfo-checkGame-Group'} variant="flush">
       <ListGroup.Item id="card-info-list-group-req"><h3 className='checkGameTitle'>Check Game</h3></ListGroup.Item>
       <ListGroup.Item id="card-info-list-item-req">
       <div className="ms-2 me-auto">

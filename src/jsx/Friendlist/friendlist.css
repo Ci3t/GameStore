@@ -106,3 +106,10 @@ border: 1px solid black;
     color: black;
     padding: 0.2em;
 }
+
+@media all and (max-width:530px) {
+    
+    .friendlist-fixed-Position{
+       top:30px;
+    }
+}

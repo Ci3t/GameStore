@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import './gameinfo.css'
 function GameInfoImgSlider({gameData}) {
   return (
-    <Carousel fade>
+    <Carousel className='carouselGameInfoSlider' fade>
         {gameData.screenshots && gameData.screenshots.map(img=>(
               <Carousel.Item  className='gameInfoSlider'>
               <img
@@ -15,9 +15,9 @@ function GameInfoImgSlider({gameData}) {
                     console.log('LOADEDDDD');
                 }}
               />
-              <Carousel.Caption>
-                <h3>IN GAME SCREENSHOTS</h3>
-                <p>all rights reserved to {gameData.developer} </p>
+              <Carousel.Caption >
+                <h3 id="#gameInfo-SliderText">IN GAME SCREENSHOTS</h3>
+                <p id="#gameInfo-SliderText">all rights reserved to {gameData.developer} </p>
               </Carousel.Caption>
             </Carousel.Item>
         ))}
