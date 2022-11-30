@@ -42,9 +42,9 @@ function StoreImageSlider() {
         style={{maxHeight: '500px'}}
       />
       <Carousel.Caption>
-        <h3>Nofar</h3>
+        <h3>Ahmed</h3>
         <p>
-          i have one more questions
+          Mordiiiiiiiiii
         </p>
       </Carousel.Caption>
     </Carousel.Item>
