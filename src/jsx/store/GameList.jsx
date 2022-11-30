@@ -92,7 +92,7 @@ function GameList({ gamesList }) {
                               <Link
                                 className="infoBtn"
                                 to={`/store/${game.id}`}
-                                style={{ margin: "1rem" }}
+                                
                               >
                                 <span>More Info</span>
                               </Link>
