@@ -39,7 +39,7 @@ function Store() {
       <StoreImageSlider gamesList={gamesList} />
       <h4 className='ErrorMessageStore'>{errorStore?.message}</h4>
       {/* //!TODO SPINNER */}
-      {isLoading && <h1>LOADINGGG</h1>}
+      {isLoading && <span class="loader"></span>}
       <GameList gamesList={gamesList}/>
       
     </div>

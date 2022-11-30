@@ -29,7 +29,7 @@ function HomePage() {
     <div className='homePage-imgBG-cont'></div>
 
     <div className='homePage-logo'>
-    <img width='450px'src='./images/logo.png'/>
+    <img alt="logo" width='450px'src='./images/logo.png'/>
     </div>
    
       

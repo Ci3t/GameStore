@@ -117,6 +117,7 @@ function FriendList({ showFriends }) {
                             <img
                               className="friendList-Img"
                               src={friend.avatar}
+                              alt="avatar"
                             />
                             <div
                               className={`${

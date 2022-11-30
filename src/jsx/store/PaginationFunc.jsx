@@ -36,7 +36,7 @@ function PaginationFunc ({gamePerPage,totalGames,paginate,total,minPages,handleN
             
            return (
               <li key={number} className="page-item">
-                  <a onClick={()=> paginate(number)}  className={currentGamePage == number ? 'active3':null}>
+                  <a onClick={()=> paginate(number)}  className={currentGamePage === number ? 'active3':null}>
                       {number}
                   </a>
               </li>

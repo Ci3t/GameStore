@@ -39,7 +39,7 @@ function Nav({setShowFriends}) {
             <MDBNavbarBrand>
               <div className="logoNavCont">
 
-              <img className="logoNavBar"  src="./images/logo.png"/><Link to={'/'}>Ci3t GameStore</Link>
+              <img alt="logo" className="logoNavBar" src="/images/logo.png"/><Link to={'/'}>Ci3t GameStore</Link>
               
               </div>
               </MDBNavbarBrand>

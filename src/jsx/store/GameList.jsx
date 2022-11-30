@@ -11,13 +11,13 @@ import "./gamelist.css";
 import PaginationFunc from "./PaginationFunc";
 
 function GameList({ gamesList }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
 
   const [currentGamePage, setCurrentGamePage] = useState(1);
   const [gamePerPage, setGamePerPage] = useState(12);
   const [total, setTotal] = useState(5);
   const [minPages, setMinPages] = useState(0);
-  const [pages, setPages] = useState(5);
+  const [pages] = useState(5);
 
   //Current game
   console.log(gamesList);
