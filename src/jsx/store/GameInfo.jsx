@@ -64,24 +64,24 @@ function GameInfo() {
           );
 
           if (checkInputRAM < +memory) {
-            setCheckMSG('You Can Run it On : "LOW" Difficulty');
+            setCheckMSG('You Can Run it On : "LOW" Settings');
             setVariant("danger");
           } else if (checkInputRAM == +memory) {
-            setCheckMSG('You Can Run it On : "MEDIUM" Difficulty');
+            setCheckMSG('You Can Run it On : "MEDIUM" Settings');
             setVariant("warning");
           } else {
-            setCheckMSG('You Can Run it On : "HIGH OR ULTRA" Difficulty');
+            setCheckMSG('You Can Run it On : "HIGH OR ULTRA" Settings');
             setVariant("success");
           }
         } else if (!gameData.minimum_system_requirements) {
           if (checkInputRAM < 8) {
-            setCheckMSG('You Can Run it On : "LOW" Difficulty');
+            setCheckMSG('You Can Run it On : "LOW" Settings');
             setVariant("danger");
           } else if (checkInputRAM == 8) {
-            setCheckMSG('You Can Run it On : "MEDIUM" Difficulty');
+            setCheckMSG('You Can Run it On : "MEDIUM" Settings');
             setVariant("warning");
           } else {
-            setCheckMSG('You Can Run it On : "HIGH OR ULTRA" Difficulty');
+            setCheckMSG('You Can Run it On : "HIGH OR ULTRA" Settings');
             setVariant("success");
           }
         }
