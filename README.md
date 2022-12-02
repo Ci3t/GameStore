@@ -16,7 +16,7 @@
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/Ci3t/GameStore?color=dark-green) ![License](https://img.shields.io/github/license/Ci3t/GameStore) 
+
 
 ## Table Of Contents
 
