@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+<br/>
+<p align="center">
+ 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">GameStore Launcher</h3>
 
-## Available Scripts
+  <p align="center">
+    GameStore Launcher Project with the ability to test if the game can run on your pc
+    <br/>
+    <br/>
+    <a href="https://github.com/Ci3t/GameStore"><strong>Explore the docs »</strong></a>
+    <br/>
+    <br/>
+    <a href="https://bit.ly/gamestore7">View Demo</a>
+   
+  </p>
+</p>
 
-In the project directory, you can run:
+![Contributors](https://img.shields.io/github/contributors/Ci3t/GameStore?color=dark-green) ![License](https://img.shields.io/github/license/Ci3t/GameStore) 
 
-### `npm start`
+## Table Of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [About the Project](#about-the-project)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+* [Authors](#authors)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Screen Shot](https://i.postimg.cc/76ZGvJzZ/Home-Page-Game-Store.jpg)
 
-### `npm run build`
+GameStore Launcher That Solve a modern issue for people without many knowledge of PC or Requirements Understanding
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+How?
+By letting People/Players typing their own pc Specs aka : GPU/RAM/CPU
+and it will do automatic testing for them 
+check Getting Started for Instructions 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React
+CSS3(mixed with some BootStrap)
+Firebase - Auth
+RapidApi / FreeToGame API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+* Choose a game you want to buy or test by clicking on More Info from game store list
+* after you get into that game scroll down to requirements 
+* you will see a check section enter your CPU>RAM>GPU info and click Check and lets do the work 
+* a message will display and tell you on what settings you can run it
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* **Ci3t (Rani)** - *AppleSeeds Fullstack Bootcamp Student* - [Ci3t (Rani)](https://github.com/Ci3t/) - **
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
