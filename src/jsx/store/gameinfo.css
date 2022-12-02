@@ -26,6 +26,7 @@
     
 
 }
+
 .gameInfoBGImageCont{
 
     background-image: url('../../../public/images/loginBG3.jpg');
@@ -141,7 +142,11 @@ margin-bottom: 1em;
 
 }
 #cpu,#ram,#gpu{
-     color: black;
+     color: rgb(255, 255, 255);
+     background-color: #111;
+     border: 1px solid rgb(240, 240, 85);
+     border-radius: 10px;
+    
 
 }
 
@@ -198,6 +203,7 @@ margin-bottom: 1em;
     text-align: center;
     color: white;
     position: relative;
+    
 }
 .gameInfoTitleError{
     z-index: 40;
@@ -210,8 +216,20 @@ margin-bottom: 1em;
     border: 3px solid black;
     display: block !important;
 }
+#gameInfo-Ul-Title{
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
 
-
+@media all and (max-width:1366px) {
+    .carouselGameInfoSlider{
+        max-width: 45em;
+       
+    }
+    #card-info-bodyAbout{
+        max-width: 46em;
+    }
+}
 @media all and (max-width:1150px) {
     #card-info-group1{
         max-width: 14em;
@@ -234,14 +252,40 @@ margin-bottom: 1em;
     #gameInfo-checkGame-Group{
         max-width: 36em;
     }
+    #gameInfo-Ul-Title{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
+}
+
+@media all and (max-width:868px) {
+    .carouselGameInfoSlider{
+        max-width: calc(33em - 71px);
+       
+    }
+    #card-info-bodyAbout{
+        max-width: calc(33em - 71px);
+    }
+    #card-info-officialWeb {
+        
+        display: block;
+    }
+    #game-info-SliderText > p{
+        font-size: 0.2em !important;
+    }
+    #gameInfo-Ul-Title{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
 }
 @media all and (max-width:768px) {
     #card-info-group1{
         max-width: 14em;
     max-height: 26em;
     }
+
     .gameInfoTitle{
-        font-size: 3.5rem;
+        font-size: 2.5em;
     }
     .carouselGameInfoSlider{
         max-width: 25em;
@@ -264,15 +308,27 @@ margin-bottom: 1em;
     #gameInfo-checkGame-Group{
         max-width: 36em;
     }
+    #card-info-officialWeb {
+        
+        display: block;
+    }
+    #gameInfo-Ul-Title{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
     
 }
+
+
+
 @media all and (max-width:668px) {
     #card-info-group1{
         max-width: 14em;
         max-height: 26em;
     }
     .gameInfoTitle{
-        font-size: 3.5rem;
+        font-size: 2em;
+        margin-top: 2em;
     }
     .carouselGameInfoSlider{
         max-width: 20em;
@@ -295,7 +351,14 @@ margin-bottom: 1em;
     #gameInfo-checkGame-Group{
         max-width: 36em;
     }
-    
+    #card-info-officialWeb {
+        
+        display: block;
+    }
+    #gameInfo-Ul-Title{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
 }
 @media all and (max-width:558px) {
     .gameInfoContainer{
@@ -307,7 +370,7 @@ margin-bottom: 1em;
         margin-top: 3em;
     }
     .gameInfoTitle{
-        font-size: 3.5rem;
+        font-size: 2em;
     }
     .carouselGameInfoSlider{
         max-width: 20em;
@@ -334,7 +397,14 @@ margin-bottom: 1em;
     #gameInfo-checkGame-Group{
         max-width: 36em;
     }
-    
+    #card-info-officialWeb {
+        
+        display: block;
+    }
+    #gameInfo-Ul-Title{
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
 }
 
 

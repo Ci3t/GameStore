@@ -11,14 +11,12 @@ function GameInfoImgSlider({gameData}) {
                 src={img.image}
                 alt="First slide"
                 style={{maxHeight: '500px',maxWidth: '1900px'}}
-                onLoad={()=>{
-                    console.log('LOADEDDDD');
-                }}
+               
               />
-              <Carousel.Caption >
+              {/* <Carousel.Caption >
                 <h3 id="#gameInfo-SliderText">IN GAME SCREENSHOTS</h3>
                 <p id="#gameInfo-SliderText">all rights reserved to {gameData.developer} </p>
-              </Carousel.Caption>
+              </Carousel.Caption> */}
             </Carousel.Item>
         ))}
      

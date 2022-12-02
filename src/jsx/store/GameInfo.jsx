@@ -139,7 +139,7 @@ function GameInfo() {
 
       <div className="gameinfoLineSep"></div>
 
-      <ul>
+      <ul id="gameInfo-Ul-Title">
         <li>
           <h1 className="gameInfoTitle">{gameData.title}</h1>
         </li>
@@ -242,7 +242,8 @@ function GameInfo() {
                     onChange={(e) => {
                       setCheckInputRAM(e.target.value);
                     }}
-                    type="text"
+                    type="number"
+                    min={0}
                     name="ram"
                     id="ram"
                     required
