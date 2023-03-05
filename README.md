@@ -11,7 +11,7 @@
     <a href="https://github.com/Ci3t/GameStore"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://bit.ly/gamestore7">View Demo</a>
+    <a href="https://fascinating-travesseiro-e21677.netlify.app/">View Demo</a>
    
   </p>
 </p>
